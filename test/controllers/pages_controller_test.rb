@@ -4,13 +4,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
 
   test "should get home" do
-    get pages_home_url
+    get root_path
     assert_response :success
   end
 
 
   test "should get about" do
-    get pages_about_path
+    get about_path
     assert_response :success
   end
 
