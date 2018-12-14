@@ -6,4 +6,18 @@ class ArticleTest < ActiveSupport::TestCase
     assert article.valid?
   end
 
+
+    RSpec.describe Article, :type => :model do
+      it "is valid with valid attributes" do
+        expect(Article.new).to be_valid
+      end
+      it "the article is not valid without of the title"
+    end
+
+
+end
+
+
+class Auction < ActiveRecord::Base
+  validates_presence_of :title
 end
