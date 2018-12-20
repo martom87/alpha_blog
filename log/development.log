@@ -3803,3 +3803,53 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-12-20 11:32:40 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (13.9ms)
+  Rendered articles/edit.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 572ms (Views: 480.5ms | ActiveRecord: 3.5ms)
+
+
+Started PATCH "/articles/1" for 127.0.0.1 at 2018-12-20 11:32:52 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7DdfmJ3d11Rs6nPoqCFPQteL/vv0VUzSXoIIM/Ym1qMADRBRsY6ZeA97WK7LrQ4f66DkZifkSyhqIs0FLLvSvQ==", "article"=>{"title"=>"Some title 1", "description"=>"some descritption 1 the changes were submitted and agin"}, "commit"=>"Submit your Article", "id"=>"1"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:28
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 23ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-12-20 11:32:53 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:48
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-12-20 11:32:54 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_messages.html.erb (2.6ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
