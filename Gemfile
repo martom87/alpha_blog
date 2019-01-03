@@ -7,7 +7,8 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-
+# Use Bycrpt
+gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
 
 #Use bootstrap
