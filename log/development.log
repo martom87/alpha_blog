@@ -15395,3 +15395,697 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 13:17:07 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/_form.html.erb (7.6ms)
+  Rendered users/edit.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 272ms (Views: 247.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 13:17:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.7ms)
+
+
+
+ActionController::UnknownFormat - UsersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/70fea067827008c8/variables" for 127.0.0.1 at 2019-01-04 13:17:27 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 13:18:52 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 406ms (Views: 376.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 13:23:49 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 248ms (Views: 233.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 13:24:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___2104881367719608757_69949521572880'
+
+Started POST "/__better_errors/9cbbcaee814dcf41/variables" for 127.0.0.1 at 2019-01-04 13:24:29 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 14:02:06 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (129.4ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `gravatar_for' for #<#<Class:0x00007fb0e0c60d20>:0x00007fb0e0c733f8>:
+  app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb___4310580736659337566_70198831025460'
+
+Started POST "/__better_errors/f562aca264046456/variables" for 127.0.0.1 at 2019-01-04 14:02:06 +0100
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 14:08:42 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myFpK/PX98Mh9TP/R4TYITTlSfjmLH87H/pUtJWDq3+2JSMxBdjFF5KbXOEKnFRKUiy3Q1gJxWRZQWJtpqHk3w==", "user"=>{"username"=>"test8", "email"=>"test8@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test8"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test8@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "test8"], ["email", "test8@example.com"], ["updated_at", "2019-01-04 13:08:42.997911"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (23.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 45ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 14:08:43 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 262ms (Views: 252.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 14:08:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (297.4ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.1ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x00007fc1957df240>:0x00007fc188103b90>
+Did you mean?  @user:
+  app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb__1942519225201395211_70234594058540'
+
+Started POST "/__better_errors/4090640eb6e5e872/variables" for 127.0.0.1 at 2019-01-04 14:08:48 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 14:09:55 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 324ms (Views: 306.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2019-01-04 14:10:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"signup"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=signup:
+  app/controllers/users_controller.rb:31:in `show'
+
+Started POST "/__better_errors/afea846890ec4718/variables" for 127.0.0.1 at 2019-01-04 14:10:50 +0100
+Started GET "/signup" for 127.0.0.1 at 2019-01-04 14:11:03 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (12.1ms)
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-04 14:11:23 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wTdihiyoaXm0uJNLUctqdiJNPc0XRp1nA0IGY/zZIO3sMyic2qdbrQfW/FUc0+YdRITDdqljJzhF+TC6z/tvTQ==", "user"=>{"username"=>"tomal", "email"=>"marcintomala87@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up", "expect"=>[:new]}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tomal"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "marcintomala87@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "tomal"], ["email", "marcintomala87@gmail.com"], ["created_at", "2019-01-04 13:11:24.052270"], ["updated_at", "2019-01-04 13:11:24.052270"], ["password_digest", "$2a$10$.Bk0ODIdVui9Kra26AQLFu1ox2ZnN8tyQ9TQsn28lEk2IBPa8b7zO"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 99ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 14:11:24 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2019-01-04 14:11:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:11:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2019-01-04 14:13:14 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2019-01-04 14:13:25 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4FaCxYi+VkJBAH1VUJDrieIocvDHYLzhcPHH1UiDUMLNUsjffrFklvJuEksdiGfihOGMS3lFBr42SvEMe6EfYg==", "user"=>{"username"=>"tomal", "email"=>"marcintomala87@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tomal"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "marcintomala87@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 17ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 14:13:25 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 86.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2019-01-04 14:13:29 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=9:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/fad81e2e0e976580/variables" for 127.0.0.1 at 2019-01-04 14:13:29 +0100
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-04 14:13:34 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 5ms (ActiveRecord: 0.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=8:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/e542aba0db6bad20/variables" for 127.0.0.1 at 2019-01-04 14:13:34 +0100
+Started GET "/users/updat" for 127.0.0.1 at 2019-01-04 14:13:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"updat"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=updat:
+  app/controllers/users_controller.rb:31:in `show'
+
+Started POST "/__better_errors/e6d197dd9b95a792/variables" for 127.0.0.1 at 2019-01-04 14:13:51 +0100
+Started GET "/users/update" for 127.0.0.1 at 2019-01-04 14:13:53 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=update:
+  app/controllers/users_controller.rb:31:in `show'
+
+Started POST "/__better_errors/36ff1cae2d54de4e/variables" for 127.0.0.1 at 2019-01-04 14:13:53 +0100
+Started GET "/users/9/update" for 127.0.0.1 at 2019-01-04 14:14:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/9/update"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/5/update" for 127.0.0.1 at 2019-01-04 14:14:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/5/update"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 14:14:20 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered users/_form.html.erb (8.6ms)
+  Rendered users/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2019-01-04 14:14:24 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2019-01-04 14:14:30 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKhPV+XruvjWjH+c4LHT4Y0wnJmfx4MkWJwpzK9BZHBtrAVNE+SILGXiEIKtqV+K6/liIiHiOXseJx8VnGMr0A==", "user"=>{"username"=>"tomal", "email"=>"marcintomala87@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tomal"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "marcintomala87@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 14:14:30 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:14:40 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:16:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 227.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:16:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:16:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:21:49 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 252ms (Views: 225.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:24:36 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 244ms (Views: 227.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2019-01-04 14:24:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.9ms)
+  Rendered users/_form.html.erb (10.7ms)
+  Rendered users/edit.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2019-01-04 14:24:58 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OiHV5Lguu+u5w0QGP/Ke8t2jMR4vSTUzardzyxYxwHsXJZ/+TiGJPwqtKxhy6hKZu2rPpZFsj2wsDEUSJROP2w==", "user"=>{"username"=>"tomal", "email"=>"marcintomala87@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tomal"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "marcintomala87@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 14:24:58 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:25:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-01-04 14:26:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-04 14:26:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T9gTCraLWDDmcxf08XHf7n5THsbMiKUBp0vZDTnnDJpi3FkQQIRq5FUdeOq8aVOFGJrgfXKtH17h8O/UCsVDOg==", "user"=>{"username"=>"martom765", "email"=>"mdptvj23@interia.pl", "password"=>"[FILTERED]"}, "commit"=>"Sign up", "expect"=>[:new]}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "martom765"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "mdptvj23@interia.pl"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (2.3ms)
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:29:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 45.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:29:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2019-01-04 14:30:23 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"expect"=>[:new], "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 255ms (Views: 239.0ms | ActiveRecord: 0.7ms)
+
+
