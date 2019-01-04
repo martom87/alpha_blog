@@ -4,3 +4,4 @@
     <%= gravatar_for @user, size: 150 %>
   </div>
 </div>
+<%= render 'articles/article', obj: @user.articles %>
