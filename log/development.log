@@ -14825,3 +14825,573 @@ Completed 200 OK in 106ms (Views: 96.4ms | ActiveRecord: 1.4ms)
 
 
   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-01-04 11:38:17 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 722ms (Views: 706.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-04 11:38:23 +0100
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started POST "/__better_errors/23fdbb3dfb2c4afb/variables" for 127.0.0.1 at 2019-01-04 11:38:23 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 11:38:29 +0100
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/6080ed7c046570de/variables" for 127.0.0.1 at 2019-01-04 11:38:30 +0100
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 11:39:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+Completed 406 Not Acceptable in 34ms (ActiveRecord: 1.0ms)
+
+
+
+ActionController::UnknownFormat - UsersController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/dd72989ef5053231/variables" for 127.0.0.1 at 2019-01-04 11:39:44 +0100
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 11:40:37 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 306ms (Views: 286.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 11:43:47 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 289ms (Views: 267.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 11:43:58 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (23.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 11:44:42 +0100
+
+AbstractController::ActionNotFound - The action 'update' could not be found for UsersController:
+
+Started POST "/__better_errors/b4c24bad8171b4fa/variables" for 127.0.0.1 at 2019-01-04 11:44:43 +0100
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 11:45:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PEVwXGxMY+mOER4FxdXjYO+HCef2DRO1R2g46Vf/e6IRQTpGmkNRPT1/cRuIzW8LiU73XEgoqeoB0w4wZN00Ag==", "user"=>{"username"=>"test4", "email"=>"test3@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 11:45:44 +0100
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/10ab76a173560971/variables" for 127.0.0.1 at 2019-01-04 11:45:44 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 11:45:46 +0100
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/e8e357b961f36c8b/variables" for 127.0.0.1 at 2019-01-04 11:45:46 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 12:00:05 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/a830666b08ef771c/variables" for 127.0.0.1 at 2019-01-04 12:00:05 +0100
+Started GET "/users/5" for 127.0.0.1 at 2019-01-04 12:00:07 +0100
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/b7ed4b93981cc96e/variables" for 127.0.0.1 at 2019-01-04 12:00:07 +0100
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:00:15 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 322ms (Views: 295.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:00:23 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ZTTrNkMKBKhlYoYu6bSvO2qeLywxgpo1baIHFe8JB3AkJm2LwMaxhL75Qb2vl7Xi2OGBw7jsDeTDb7FZJ5rvQ==", "user"=>{"username"=>"test4", "email"=>"test4@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test4"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test4@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.4ms)
+  Rendered users/edit.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 59.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:00:31 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1x3mU06hB5XASfj/4Lq0YtYISJV1XDyPjkXLldTtmlmWD2DuzW2yuRvSP2ymma67ZHfmevwyq14giH3ZHH5yQ==", "user"=>{"username"=>"test5", "email"=>"test5@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test5"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test5@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 53.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:00:36 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RdpXne+vmGWHwDJakATCjwymR2Q0pGkBBiWUxMu3szZo3h2HGaCqsTSuXUTdHE7kam+534qB015AnqId+JX8lg==", "user"=>{"username"=>"test5", "email"=>"test5@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test5"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test5@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (10.9ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "test5"], ["email", "test5@example.com"], ["password_digest", "$2a$10$lCdjEBy9RsfHBYvT8vOgouH9cuHnBnmnHgvQe4vwunQpWMLrmuy8y"], ["updated_at", "2019-01-04 11:00:36.972297"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 123ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2019-01-04 12:00:37 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 9ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=5:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/a94fd25d5ca5a3c6/variables" for 127.0.0.1 at 2019-01-04 12:00:37 +0100
+Started GET "/users/1" for 127.0.0.1 at 2019-01-04 12:01:21 +0100
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/59afceb2fca5f3e9/variables" for 127.0.0.1 at 2019-01-04 12:01:21 +0100
+Started GET "/users/1/edit" for 127.0.0.1 at 2019-01-04 12:01:29 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:02:37 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:02:53 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/arMgxIGGrIH8ASUbJOVqcCActYSZPo7s9VcioF987e8uEo+kcqvntxrwwcqsI9wcv/cOZsKbeodGOrGSe4bg==", "user"=>{"username"=>"test6", "email"=>"test6@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test6"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test6@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (3.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "test6"], ["email", "test6@example.com"], ["updated_at", "2019-01-04 11:02:53.626606"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 42ms (ActiveRecord: 19.9ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2019-01-04 12:02:53 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=5:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/865c383f5b922080/variables" for 127.0.0.1 at 2019-01-04 12:02:53 +0100
+Started GET "/articles/5" for 127.0.0.1 at 2019-01-04 12:04:34 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 16ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=5:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/fe99fdf4c4f31476/variables" for 127.0.0.1 at 2019-01-04 12:04:34 +0100
+Started GET "/articles/5" for 127.0.0.1 at 2019-01-04 12:04:35 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Article with 'id'=5:
+  app/controllers/articles_controller.rb:49:in `set_article'
+
+Started POST "/__better_errors/f6e58ce5abc5c57a/variables" for 127.0.0.1 at 2019-01-04 12:04:35 +0100
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:07:25 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 238ms (Views: 221.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:41:40 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 295ms (Views: 275.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:41:54 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:42:02 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GsUWdWHQ8tecc6klN7nb0R2oIVKPWKYHM28RgIs6Ubg3wVxvl9/AAy8dxjt6oVe6e2Hf6TF9HFh11CdZuBgeGA==", "user"=>{"username"=>"test7", "email"=>"test7@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.2ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007f81bcf1ead8>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:23:in `update'
+
+Started POST "/__better_errors/0b51c51706fce333/variables" for 127.0.0.1 at 2019-01-04 12:42:02 +0100
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:46:07 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GsUWdWHQ8tecc6klN7nb0R2oIVKPWKYHM28RgIs6Ubg3wVxvl9/AAy8dxjt6oVe6e2Hf6TF9HFh11CdZuBgeGA==", "user"=>{"username"=>"test7", "email"=>"test7@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 0.7ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007f7e4c0ebc40>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:23:in `update'
+
+Started POST "/__better_errors/765b8a935017c0e7/variables" for 127.0.0.1 at 2019-01-04 12:46:08 +0100
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:46:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/_form.html.erb (11.7ms)
+  Rendered users/edit.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 200ms (Views: 198.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:46:23 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myFpK/PX98Mh9TP/R4TYITTlSfjmLH87H/pUtJWDq3+2JSMxBdjFF5KbXOEKnFRKUiy3Q1gJxWRZQWJtpqHk3w==", "user"=>{"username"=>"test8", "email"=>"test8@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.2ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007f7e48009ba0>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:23:in `update'
+
+Started POST "/__better_errors/97c0eb6f863d6b1b/variables" for 127.0.0.1 at 2019-01-04 12:46:23 +0100
+Started GET "/" for 127.0.0.1 at 2019-01-04 12:47:14 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 120.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:47:21 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:47:27 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pR04uKWOiT8+ULqU116XutI/7sKm4M3pDrzMzkaSC7mIGXKiU4G7640+1YqaRhvRtPYQeRjFd7ZIB/oXdbBEGQ==", "user"=>{"username"=>"test7", "email"=>"test7@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.2ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007f7e45e4b748>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:23:in `update'
+
+Started POST "/__better_errors/5ac3a3de8ba9d9e1/variables" for 127.0.0.1 at 2019-01-04 12:47:28 +0100
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:49:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/tomal/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pR04uKWOiT8+ULqU116XutI/7sKm4M3pDrzMzkaSC7mIGXKiU4G7640+1YqaRhvRtPYQeRjFd7ZIB/oXdbBEGQ==", "user"=>{"username"=>"test7", "email"=>"test7@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test7"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test7@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "test7"], ["email", "test7@example.com"], ["updated_at", "2019-01-04 11:49:18.875006"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 29ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 12:49:18 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 338.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-04 12:49:25 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:49:35 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/_form.html.erb (8.9ms)
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2019-01-04 12:49:48 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S8IZZz2OowQ6UZduJV+HZkZD/k87KAz09N21eRn98Y9mxlN9y4GR0Ik/+HBoRwsNIIoA9IUNtquyZoOgKt++Lw==", "user"=>{"username"=>"test9", "email"=>"test9@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "test9"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "test9@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "test9"], ["email", "test9@example.com"], ["updated_at", "2019-01-04 11:49:48.549176"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (23.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 39ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 12:49:48 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2019-01-04 12:50:01 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"expect"=>[:new], "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-04 12:50:04 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (2.3ms)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.4ms)
+
+
