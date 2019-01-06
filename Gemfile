@@ -11,6 +11,13 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'better_errors'
 
+#Uses will paginate
+gem 'will_paginate', '~>3.0.7'
+
+#uses bootstrap will paginate
+gem 'bootstrap-will_paginate', '~>0.0.10'
+
+
 #Use bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'jquery-rails'
