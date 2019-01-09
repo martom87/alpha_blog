@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update]
 
+
+
   def new
     @article = Article.new
   end
